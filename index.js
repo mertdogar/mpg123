@@ -33,7 +33,7 @@ function MpgPlayer() {
         line.unshift('frame')
         self.emit.apply(self, line)
       }
-      
+
     }))
 
 }
@@ -57,7 +57,7 @@ p.stop = function () {
 }
 p.gain = function (vol) {
   vol = Math.min(Math.max(Math.round(vol), 0), 100)
-  return this._cmd('GAIN', vol)
+  return this._cmd('VOLUME', vol)
 }
 
 p.close = function () {
